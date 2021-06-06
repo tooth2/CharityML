@@ -11,6 +11,27 @@ In this project several supervised learning algorithms available in sklearn are 
 - explore the chosen model and its performance to see just how well it's performing when considering the data it's given.
 - summarize to determine which algorithm provided the highest donation yield while also reducing the total number of letters being sent
 
+### Data Features
+The modified census dataset consists of approximately 32,000 data points, with each datapoint having 13 features. This dataset is a modified version of the dataset published in the paper *"Scaling Up the Accuracy of Naive-Bayes Classifiers: a Decision-Tree Hybrid",* by Ron Kohavi. You may find this paper [online](https://www.aaai.org/Papers/KDD/1996/KDD96-033.pdf), with the original dataset hosted on [UCI](https://archive.ics.uci.edu/ml/datasets/Census+Income).
+
+**Features**
+    - age: Age. continuous
+    - workclass: Working Class, non-numerical(categorical variables) 
+    - education: Level of Education, non-numerical(categorical variables) 
+    - education-num: Number of educational years completed, continuous
+    - marital-status: Marital status, non-numerical(categorical variables) 
+    - occupation: Work Occupation, non-numerical(categorical variables) 
+    - relationship: Relationship Status, non-numerical(categorical variables) 
+    - race: Race, non-numerical(categorical variables) 
+    - sex: Sex(Female, Male), non-numerical(categorical variables) 
+    - capital-gain: Monetary Capital Gains, continuous
+    - capital-loss: Monetary Capital Losses, continuous
+    - hours-per-week: Average Hours Per Week Worked, continuous
+    - native-country: Native Country, non-numerical(categorical variables) 
+
+**Target Variable**
+- `income`: Income Class (<=50K, >50K)
+- 
 ### Dependencies
 This project uses the following software and Python libraries:
 - [Python 3.6](https://www.python.org/download/releases/3.6/)
@@ -19,6 +40,16 @@ This project uses the following software and Python libraries:
 - [scikit-learn](http://scikit-learn.org/stable/)
 - [matplotlib](http://matplotlib.org/)
 - [Jupyter Notebook](http://ipython.org/notebook.html)
+
+### Run
+In a terminal or command window, navigate to the project directory and run one of the following commands:
+```bash
+ipython notebook finding_donors.ipynb
+```  
+or
+```bash
+jupyter notebook finding_donors.ipynb
+```
 
 ### Project structure
 - finding_donors.ipynb: main file 
@@ -36,20 +67,6 @@ This project uses the following software and Python libraries:
         - Use pandas.get_dummies() to perform one-hot encoding on the 'features_log_minmax_transform' data.
         - Convert the target label 'income_raw' to numerical entries.
         - Set records with "<=50K" to 0 and records with ">50K" to 1.
-- Featureset Exploration
-    - age: continuous
-    - workclass: non-numerical(categorical variables) 
-    - education: non-numerical(categorical variables) 
-    - education-num: continuous
-    - marital-status: non-numerical(categorical variables) 
-    - occupation: non-numerical(categorical variables) 
-    - relationship: non-numerical(categorical variables) 
-    - race: non-numerical(categorical variables) 
-    - sex: Female, Male : non-numerical(categorical variables) 
-    - capital-gain: continuous
-    - capital-loss: continuous
-    - hours-per-week: continuous
-    - native-country: non-numerical(categorical variables) 
 - Evaluating Model Performance
     - Naive Predictor Performance: both accuracy and F1 scores of the naive predictor are as follows:
     - Accuracy measures how often the classifier makes the correct prediction. It’s the ratio of the number of correct predictions to the total number of predictions (the number of test data points).
