@@ -57,7 +57,7 @@ This project uses the following software and Python libraries:
         - [True Positives/(True Positives + False Positives)]
     - Recall(sensitivity) tells us what proportion of messages that actually were spam were classified by us as spam. It is a ratio of true positives(words classified as spam, and which are actually spam) to all the words that were actually spam, in other words it is the ratio of
         - [True Positives/(True Positives + False Negatives)]
-- Model Comparison
+- Applied Model Comparison
     - Decision Tree
         - understandable explanation over the prediction, No assumptions on distribution of data
         - Decision trees are better for categorical data and it deals colinearity better than SVM.
